@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "postinstall": "webpack -p",
+    "postinstall": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
     "start":"node server.js"
   },
   "author": "",
