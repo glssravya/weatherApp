@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 .main {
-    
     background-color: #e4f2fb;
   }
 .card {
@@ -327,4 +326,7 @@
   .cityData {
       text-align: center;
       padding-bottom: 30px;
+  }
+  .spinner {
+    text-align: center;
   }

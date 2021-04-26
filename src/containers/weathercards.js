@@ -40,16 +40,20 @@ class WeatherCards extends React.Component{
         let {weather,cityInfo} = this.props
         console.log(this.props);
         return (
-        <section className="ajax-section">
-            <h3 className="cityData">{cityInfo.name} ({cityInfo.country})</h3>
-            <div className="container">
-                <ul className="cities">
-                    {weather.map((day,i) => {
-                        return <DayCard data={this.getDetails(day)} key={i}  />
-                    })}
-                </ul>
-            </div>
-        </section>
+            <section className="ajax-section">
+            { weather.length === 0 ? (
+                 <div className="loading">
+                   <div className="spinner">Loading Weather Forecast...</div>
+                 </div>
+               ) : (
+             <div className="container"><h3 className="cityData">{cityInfo.name} ({cityInfo.country})</h3>
+                 <ul className="cities">
+                     {weather.map((day,i) => {
+                         return <DayCard data={this.getDetails(day)} key={i}  />
+                     })}
+                 </ul>
+             </div>)}
+         </section>
         )
     }
 }
